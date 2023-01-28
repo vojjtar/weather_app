@@ -1,0 +1,123 @@
+body {
+    margin: 0rem;
+    padding: 0rem;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg{
+    background: url(http://papers.co/wallpaper/papers.co-vf02-cloud-sky-white-nature-fly-41-iphone-wallpaper.jpg);
+}
+
+#main-wrap {
+    display: grid;
+    grid-template-areas:
+        "navbar navbar navbar"
+        "left-banner content-banner right-banner";
+
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 3rem 1fr;
+
+    width: 100vw;
+    height: 100vh;
+
+
+}
+
+#navbar {
+    grid-area: navbar;
+
+    background-color: #6497b1;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: auto;
+    padding-top: auto;
+}
+#navbar div:last-child {
+    margin-right: 1rem;
+}
+#logo {
+    margin-left: 1rem;
+}
+#logo, #time, #search {
+    margin-top: auto;
+    margin-bottom: auto;
+
+    width: 15rem;
+}
+
+#search > input{
+    background-color: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.527);
+    border-radius: 8px;
+    width: 15rem;
+    height: 2rem;
+    font-size: 1rem;
+}
+
+
+
+#left-banner {
+    grid-area: left-banner;
+    opacity: 0.7;
+}
+#right-banner {
+    grid-area: right-banner;
+    opacity: 0.7;
+}
+
+
+#content-banner {
+    grid-area: content-banner;
+
+
+    margin: 0rem;
+
+    padding-top: 0rem;
+
+    box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.75);
+}
+
+#top-bar {
+    padding: 0.5rem;
+    margin: 0rem;
+
+
+    height: 6rem;
+
+}
+#top-bar #welcome-text {
+    margin: 0;
+}
+
+#page-content {
+    grid-area: page-content;
+}
+
+#welcome-text {
+
+    animation: fade-in 2s, slide-in-left 2s;
+
+    font-size: 4rem;
+
+}
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes slide-in-left {
+    0% {
+        transform: translateY(-25px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
